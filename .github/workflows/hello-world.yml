@@ -7,10 +7,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Echo text
-          run: echo "Hello-world!"
+          run: 
+              echo "Hello-world!"
+              sleep 100s
     world_job:
         runs-on: ubuntu-latest
         needs: hello_job
         steps:
         - name: display
+          timeout-minutes: 1
           run: echo "hi"          
