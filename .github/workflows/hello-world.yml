@@ -16,4 +16,4 @@ jobs:
           timeout-minutes: 1
           run: |
             echo "hi"
-            sleep 100sec                       
+            sleep 100s                    
