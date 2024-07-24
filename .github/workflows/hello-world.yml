@@ -5,6 +5,15 @@ on: workflow_dispatch
 jobs:
     hello_job:
         runs-on: ubuntu-latest
+        concurrency:
+          group: new one
         steps:
         - name: Echo text
           run: echo "Hello-world!"
+    world_job:
+        runs-on: ubuntu-latest
+        concurrency:
+          group: new one
+        steps:
+        - name: display
+          run: echo "hi"          
