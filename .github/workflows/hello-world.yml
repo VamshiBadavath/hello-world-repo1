@@ -7,6 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         concurrency:
           group: new one
+          cancel-in-progress: true
         steps:
         - name: Echo text
           run: echo "Hello-world!"
